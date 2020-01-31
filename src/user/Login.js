@@ -10,7 +10,6 @@ export default function Login({ dispatch }) {
     <form
       onSubmit={e => {
         e.preventDefault();
-        debugger;
         dispatch({ type: "LOGIN", username });
       }}
     >
