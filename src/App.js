@@ -3,6 +3,8 @@ import appReducer from "./reducers";
 import PostList from "./post/PostList";
 import CreatePost from "./post/CreatePost";
 import UserBar from "./user/UserBar";
+import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles.css";
 
 const defaultPosts = [
@@ -25,13 +27,18 @@ export default function App() {
   });
   const { user, posts } = state;
   return (
-    <div style={{ padding: 8 }}>
-      <UserBar user={user} dispatch={dispatch} />
-      <br />
-      {user && <CreatePost user={user} posts={posts} dispatch={dispatch} />}
-      <br />
-      <hr />
-      <PostList posts={posts} />
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <UserBar user={user} dispatch={dispatch} />
+          <br />
+          {user && <CreatePost user={user} posts={posts} dispatch={dispatch} />}
+          <br />
+          <hr />
+          <PostList posts={posts} />
+        </Col>
+      </Row>
+    </Container>
+
   );
 }
