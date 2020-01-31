@@ -1,2 +1,0 @@
-# ReactHooksReducer
-Created with CodeSandbox
