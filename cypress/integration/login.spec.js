@@ -1,9 +1,9 @@
 describe('My First Test', function() {
-    it('finds the content "type"', function() {
+    it('Loggin works', function() {
       cy.visit('http://localhost:3000')
   
       cy.get('#login-username').type('hola');
       cy.get('#login-password').type('patata');
-      cy.get('.btn').click()
+      cy.get(':nth-child(1) > form > .btn').click()
     })
   })
