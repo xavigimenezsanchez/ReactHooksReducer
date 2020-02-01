@@ -30,7 +30,7 @@ it("There are a form with 3 inputs and 2 labels", () => {
             inputs = container.getElementsByTagName("input").length,
             labels = container.getElementsByTagName("label").length;
     expect(form).toBe(1);
-    expect(inputs).toBe(3);
+    expect(inputs).toBe(2);
     expect(labels).toBe(2);
 })
 

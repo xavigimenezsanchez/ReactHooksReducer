@@ -17,7 +17,7 @@ export default function Login({ dispatch }) {
       }}
     >
 
-        <Form.Group controlId="login-username-group">
+        <Form.Group>
             <Form.Label>Username </Form.Label>
             <Form.Control type="text" 
                           placeholder="user name" value={username}
@@ -29,7 +29,7 @@ export default function Login({ dispatch }) {
             </Form.Text>
         </Form.Group>
 
-        <Form.Group controlId="login-password-group">
+        <Form.Group >
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" id="login-password"/>
         </Form.Group>
