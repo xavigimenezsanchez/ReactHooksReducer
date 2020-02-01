@@ -1,14 +1,18 @@
 import React from "react";
+import { Card } from "react-bootstrap";
 
 export default function Post({ title, content, author }) {
   return (
-    <div>
-      <h3>{title}</h3>
-      <div>{content}</div>
-      <br />
-      <i>
-        Written by <b>{author}</b>
-      </i>
-    </div>
-  );
+     <Card bg="light">
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>
+          {content}
+        </Card.Text>
+      </Card.Body>
+      <Card.Footer>
+        <small className="text-muted">Written by <b>{author}</b></small>
+      </Card.Footer>
+    </Card>
+    );
 }

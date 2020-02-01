@@ -31,10 +31,11 @@ export default function App() {
       <Row>
         <Col>
           <UserBar user={user} dispatch={dispatch} />
-          <br />
-          {user && <CreatePost user={user} posts={posts} dispatch={dispatch} />}
-          <br />
-          <hr />
+        </Col>
+      </Row>
+      <Row>
+        {user && <Col> <CreatePost user={user} posts={posts} dispatch={dispatch} /></Col>}
+        <Col>
           <PostList posts={posts} />
         </Col>
       </Row>

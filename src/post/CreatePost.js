@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Form, Badge, Button } from "react-bootstrap";
 export default function CreatePost({ user, posts, dispatch }) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -14,27 +15,32 @@ export default function CreatePost({ user, posts, dispatch }) {
     dispatch({ type: "CREATE_POST", title, content, author: user });
   }
   return (
-    <form
+    <Form
       onSubmit={e => {
         e.preventDefault();
         handleCreate();
       }}
     >
-      <div>
-        Author: <b>{user}</b>
-      </div>
-      <div>
-        <label htmlFor="create-title">Title:</label>
-        <input
+      <h3>
+        Author:<Badge variant="secondary">{user}</Badge>
+      </h3>
+      <Form.Group>
+        <Form.Label>Title</Form.Label>
+        <Form.Control
           type="text"
           value={title}
           onChange={handleTitle}
           name="create-title"
           id="create-title"
         />
-      </div>{" "}
-      <textarea value={content} onChange={handleContent} />{" "}
-      <input type="submit" value="Create" />
-    </form>
+      </Form.Group>
+      
+      <Form.Group>
+        <Form.Control as="textarea" rows="5" value={content} onChange={handleContent} />
+      </Form.Group>
+
+      <Button variant="primary" type="submit">Create</Button>
+
+    </Form>
   );
 }
