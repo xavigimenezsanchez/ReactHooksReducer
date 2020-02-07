@@ -2,13 +2,14 @@ const user = "User Test"
 
 
 context('Loggin Stuff', () => {
+  
   beforeEach(() => {
     
   })    
   
   it('Loggin works', () => {
+      
       cy.visit('http://localhost:3000')
-  
       cy.get('#login-username').type(user);
       cy.get('#login-password').type('patata');
       cy.get(':nth-child(1) > form > .btn').click()
