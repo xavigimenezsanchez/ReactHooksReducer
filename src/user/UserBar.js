@@ -2,7 +2,8 @@ import React from "react";
 import Login from "./Login";
 import Logout from "./Logout";
 import Register from "./Register";
-import { Container, Row, Col } from 'react-bootstrap';
+import Menu from "./Menu"
+import { Container, Button, Accordion, Card, Row, Col } from 'react-bootstrap';
 
 
 export default function UseBar({ user, dispatch }) {
@@ -13,13 +14,33 @@ export default function UseBar({ user, dispatch }) {
       <React.Fragment>
         <Container>
           <Row>
-            <Col>
-              <Login dispatch={dispatch} />
+            <Col md={2}>
+              <Menu/>
             </Col>
             <Col>
-              <Register dispatch={dispatch} />
+              <Accordion>
+                <Card>
+                  <Card.Header>
+                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                      Filter
+                    </Accordion.Toggle>
+                  </Card.Header>
+                  <Accordion.Collapse eventKey="0">
+                    <Card.Body>
+                      <Row>
+                        <Col>
+                          <Login dispatch={dispatch} />
+                        </Col>
+                        <Col>
+                          <Register dispatch={dispatch} />
+                        </Col>
+                      </Row>
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              </Accordion>
             </Col>
-        </Row>
+          </Row>
         </Container>
       </React.Fragment>
     );
