@@ -1,0 +1,3 @@
+.ellipsis a::after {
+    display:none;
+}

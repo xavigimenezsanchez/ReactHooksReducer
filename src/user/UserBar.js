@@ -14,7 +14,7 @@ export default function UseBar({ user, dispatch }) {
       <React.Fragment>
         <Container>
           <Row>
-            <Col md={2}>
+            <Col md={3}>
               <Menu/>
             </Col>
             <Col>
