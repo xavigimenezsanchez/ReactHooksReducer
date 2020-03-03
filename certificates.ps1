@@ -12,8 +12,8 @@ Import-PfxCertificate -Password $securePassword -FilePath $pfxPath -CertStoreLoc
 $keyPath = "./localhost-key.pem"
 $certPath = "./localhost.pem"
 
-openssl pkcs12 -in $pfxPath -nocerts -out $keyPath -nodes -passin pass:$password
-openssl pkcs12 -in $pfxPath -nokeys -out $certPath -nodes -passin pass:$password
+C:\"Program Files"\OpenSSL-Win64\bin\openssl pkcs12 -in $pfxPath -nocerts -out $keyPath -nodes -passin pass:$password
+C:\"Program Files"\OpenSSL-Win64\bin\openssl pkcs12 -in $pfxPath -nokeys -out $certPath -nodes -passin pass:$password
 
 $key = Get-Content ./localhost-key.pem
 $cert = Get-Content ./localhost.pem
