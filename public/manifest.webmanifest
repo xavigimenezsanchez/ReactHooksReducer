@@ -1,0 +1,15 @@
+{
+    "background_color": "purple",
+    "description": "Reactjs hooks",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "icon/fox-icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "name": "Reactjs hooks",
+    "short_name": "hooks",
+    "start_url": "./"
+  }
